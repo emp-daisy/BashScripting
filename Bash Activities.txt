@@ -1,0 +1,37 @@
+First off, think about writing your own backup script. You can make it as simple or complex as you like. Maybe start off with a really simple one and progressively improve it.
+Now see if you can write a script that will give you a report about a given directory. Things you could report on include
+How many files are in the directory?
+How many directories are in the directory?
+What is the biggest file?
+What is the most recently modified or created file?
+A list of people who own files in the directory.
+Anything else you can think of
+
+
+A good place to start is to create a simple script which will accept some command line arguments and echo out some details about them (eg, how many are there, what is the secone one etc).
+Create a script which will print a random word. There is a file containing a list of words on your system (usually /usr/share/dict/words or /usr/dict/words). Hint: Piping will be useful here.
+Expand the previous activity so that if a number is supplied as the first command line argument then it will select from only words with that many characters. Hint: Grep may be useful here.
+Take a copy of the two files script1.sh and script2.sh above then experiment by tweaking them and running them and observing the output. This will help you get a feel for how exporting variables works.
+Now let's create a script which will take a filename as its first argument and create a dated copy of the file. eg. if our file was named file1.txt it would create a copy such as 2018-11-16_file1.txt. (To achieve this you will probably want to play with command substitution and the command date)
+Challenge: To make it a bit harder, see if you can get it so that the date is after the name of the file (eg. file1_2018-11-16.txt (The command basename can be useful here.)
+Challenge: Now see if you can expand the previous question to accept a list of files on the command line and it will create a named copy of all of them. (The command xargs may be useful here.).
+
+
+Create a simple script which will take two command line arguments and then multiply them together using each of the methods detailed above.
+Write a Bash script which will print tomorrows date. (Hint: use the command date)
+Remember when we looked at variables we discovered $RANDOM will return a random number. This number is between 0 and 32767 which is not always the most useful. Let's write a script which will use this variable and some arithmetic (hint: play with modulus) to return a random number between 0 and 100.
+Now let's play with the previous script. Modify it so that you can specify as a command line argument the upper limit of the random number. Can you make it so that a lower limit can be specified also? eg. if I ran ./random.sh 10 45 it would only return random numbers between 10 and 45.
+
+
+
+Create a simple script which will ask the user for a few pieces of information then combine this into a message which is echo'd to the screen.
+Add to the previous script to add in some data coming from command line arguments and maybe some of the other system variables.
+Create a script which will take data from STDIN and print the 3rd line only.
+Now play about with creating a script which will behave as a filter. Create a script which will rearrange the output of the command ls -l in a useful way (eg maybe you only print the filename, size and owner) (Hint: awk can be useful here).
+
+
+Create a simple script which will print the numbers 1 - 10 (each on a separate line) and whether they are even or odd.
+Write a Bash script which will take a single command line argument (a directory) and will print each entry in that directory. If the entry is a file it will print it's size. If the entry is a directory it will print how many items are in that directory.
+Create a command line version of the game Mastermind. Instead of coloured marbles you could use letters or numbers or be creative and find another way.
+Create a command line version of the game Tic Tac Toe. Make it so you can play against the computer.
+
